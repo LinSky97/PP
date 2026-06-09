@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCenter - 15 Computers & Order System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">💻 World Cup 2026 PC</div>
+        <nav>
+            <a href="#">ទំព័រដើម</a>
+            <a href="#products-section">ផលិតផល</a>
+            <a href="#cart-section">ពិនិត្យកន្ត្រកទំនិញ</a>
+        </nav>
+        <div class="cart-box" onclick="scrollToCart()">
+            🛒 ក្នុងកន្ត្រក: <span id="cart-count">0</span> គ្រឿង
+        </div>
+    </header>
+
+    <section class="banner">
+        <h1>មជ្ឈមណ្ឌលកុំព្យូទ័រលំដាប់ខ្ពស់</h1>
+        <p>ជ្រើសរើសកុំព្យូទ័រដែលអ្នកស្រលាញ់ រួចធ្វើការកម្មង់ និងគិតលុយភ្លាមៗខាងក្រោម!</p>
+    </section>
+
+    <main id="products-section">
+        <h2 class="section-title">កុំព្យូទ័រទាំង ១៥ គ្រឿងសម្រាប់ជ្រើសរើស</h2>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500&q=80" alt="ASUS ROG">
+                <h3>ASUS ROG Strix G16</h3>
+                <p class="specs">Core i7 | RTX 4060 | 16GB RAM</p>
+                <p class="price">$1399.00</p>
+                <button class="btn-add" onclick="addToCart('ASUS ROG Strix G16', 1399)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80" alt="MacBook Air">
+                <h3>MacBook Air M3 (2024)</h3>
+                <p class="specs">Apple M3 | 8-Core GPU | 8GB</p>
+                <p class="price">$1099.00</p>
+                <button class="btn-add" onclick="addToCart('MacBook Air M3', 1099)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&q=80" alt="MSI Cyborg">
+                <h3>MSI Cyborg 15 Gaming</h3>
+                <p class="specs">Core i5 | RTX 4050 | 8GB RAM</p>
+                <p class="price">$899.00</p>
+                <button class="btn-add" onclick="addToCart('MSI Cyborg 15 Gaming', 899)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&q=80" alt="Dell XPS">
+                <h3>Dell XPS 13 Ultra</h3>
+                <p class="specs">Intel Ultra 7 | 16GB RAM | SSD 512GB</p>
+                <p class="price">$1450.00</p>
+                <button class="btn-add" onclick="addToCart('Dell XPS 13 Ultra', 1450)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&q=80" alt="HP Pavilion">
+                <h3>HP Pavilion 15 Office</h3>
+                <p class="specs">Core i5 | Iris Xe | 8GB RAM</p>
+                <p class="price">$580.00</p>
+                <button class="btn-add" onclick="addToCart('HP Pavilion 15 Office', 580)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://th.bing.com/th/id/R.eb4ddd926db146afaa0bbbbc4769870b?rik=qoHDGzGw%2bhj6ng&pid=ImgRaw&r=0"Lenovo Legion">
+                <h3>Lenovo Legion Pro 5</h3>
+                <p class="specs">Ryzen 7 | RTX 4070 | 32GB RAM</p>
+                <p class="price">$1650.00</p>
+                <button class="btn-add" onclick="addToCart('Lenovo Legion Pro 5', 1650)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.YRUqeQQp1e4TPxrX_9u0cQHaEM?cb=thfc1falcon&rs=1&pid=ImgDetMain&o=7&rm=3"Acer Aspire">
+                <h3>Acer Aspire 5 Slim</h3>
+                <p class="specs">Core i3 | UHD Graphics | 8GB</p>
+                <p class="price">$420.00</p>
+                <button class="btn-add" onclick="addToCart('Acer Aspire 5 Slim', 420)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80" alt="MacBook Pro">
+                <h3>MacBook Pro 16" M3 Max</h3>
+                <p class="specs">M3 Max | 30-Core GPU | 36GB</p>
+                <p class="price">$3499.00</p>
+                <button class="btn-add" onclick="addToCart('MacBook Pro 16 M3 Max', 3499)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=500&q=80" alt="Custom PC">
+                <h3>Custom PC Core i9 Set</h3>
+                <p class="specs">i9-14900K | RTX 4090 | 64GB DDR5</p>
+                <p class="price">$3800.00</p>
+                <button class="btn-add" onclick="addToCart('Custom PC Core i9 Set', 3800)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&q=80" alt="ASUS Zenbook">
+                <h3>ASUS Zenbook 14 OLED</h3>
+                <p class="specs">Ultra 5 | OLED 2.8K | 16GB RAM</p>
+                <p class="price">$950.00</p>
+                <button class="btn-add" onclick="addToCart('ASUS Zenbook 14 OLED', 950)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500&q=80" alt="Predator">
+                <h3>Acer Predator Helios 16</h3>
+                <p class="specs">Core i9 | RTX 4080 | 32GB RAM</p>
+                <p class="price">$2199.00</p>
+                <button class="btn-add" onclick="addToCart('Acer Predator Helios 16', 2199)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&q=80" alt="Lenovo IdeaPad">
+                <h3>Lenovo IdeaPad 3 Slim</h3>
+                <p class="specs">Ryzen 5 | Vega 7 | 8GB RAM</p>
+                <p class="price">$499.00</p>
+                <button class="btn-add" onclick="addToCart('Lenovo IdeaPad 3 Slim', 499)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&q=80" alt="HP Omen">
+                <h3>HP Omen 16 Advanced</h3>
+                <p class="specs">Ryzen 9 | RTX 4070 | 16GB RAM</p>
+                <p class="price">$1499.00</p>
+                <button class="btn-add" onclick="addToCart('HP Omen 16 Advanced', 1499)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&q=80" alt="Surface">
+                <h3>Surface Laptop 5 Touch</h3>
+                <p class="specs">Core i7 | Iris Xe | 16GB RAM</p>
+                <p class="price">$1299.00</p>
+                <button class="btn-add" onclick="addToCart('Surface Laptop 5 Touch', 1299)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.Qvq3gDBX5E4enqDLVhOo1AHaHa?cb=thfc1falcon&rs=1&pid=ImgDetMain&o=7&rm=3"Gigabyte">
+                <h3>Gigabyte G5 Entry Gaming</h3>
+                <p class="specs">Core i5 | RTX 3050 | 8GB RAM</p>
+                <p class="price">$699.00</p>
+                <button class="btn-add" onclick="addToCart('Gigabyte G5 Entry', 699)">ដាក់ចូលកន្ត្រក</button>
+            </div>
+
+        </div>
+    </main>
+
+    <section id="cart-section" class="cart-container">
+        <h2>🛒 បញ្ជីទំនិញក្នុងកន្ត្រក និងការគិតលុយ</h2>
+        
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>ឈ្មោះទំនិញ</th>
+                    <th>តម្លៃរាយ</th>
+                    <th>សកម្មភាព</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <tr id="empty-message"><td colspan="3">មិនទាន់មានទំនិញក្នុងកន្ត្រកនៅឡើយទេ</td></tr>
+            </tbody>
+        </table>
+
+        <div class="checkout-box">
+            <h3>សរុបលុយរួម: <span id="total-price">$0.00</span></h3>
+            <button class="btn-checkout" onclick="checkoutOrder()">🧾 ធ្វើការកម្មង់ និងគិតលុយ</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TechCenter PC. រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
